@@ -1495,7 +1495,7 @@ namespace RoboWorker3
         public static string login = "";
         public static string password = "";
         public static double close_bet_difference = 1.0;
-        public static int max_markets_count = 10;
+        public static int max_markets_count = 15;
         public static int sleep_time = 10;
         public static double stoploss = 0;
         public static double min_cf = 0;
