@@ -1794,8 +1794,8 @@ namespace RoboWorker3
                 return true;
             }
             int magicNumber = (new Random((int)DateTime.Now.Ticks)).Next();
-            Bet layBet = addBet(cfBack, market.market_id, market.teamId, false, backCount <= Market.maxUnmatchedCount, magicNumber);
-            Bet backBet = addBet(cfLay, market.market_id, market.teamId, true, layCount <= Market.maxUnmatchedCount, magicNumber);
+            Bet layBet = addBet(cfBack, market.market_id, market.teamId, false, backCount <= layCount, magicNumber);
+            Bet backBet = addBet(cfLay, market.market_id, market.teamId, true, backCount >= layCount, magicNumber);
 
             if (layBet != null && backBet != null)
             {
